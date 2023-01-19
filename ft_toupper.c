@@ -6,30 +6,24 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:18:03 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/16 19:13:05 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/01/19 19:06:40 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<ctype.h>
+#include "libft.h"
 
-int	ft_toupper(char *str)
+int	ft_toupper(int c)
 {
-	if (str[] != 0)
-	{
-		if (str[i] <= 'z' && str[i] >= 'a')
-		{
-			str[i] + 32;
-			i++;
-		}
-	}
+	if (c <= 'z' && c >= 'a')
+		c -= 32;
+	return (c);
 }
 
-int	main(void)
-{
-	char	*str1;
+// int	main(void)
+// {
+// 	int	c;
 
-	str1[] = "UnderdoG12";
-	printf("input:(%s)\n", str1);
-	ft_toupper(str1);
-	printf("output:%s\n", str1);
-}
+// 	c = 's';
+// 	printf("input:%c\n", c);
+// 	printf("output:%c\n", ft_toupper(c));
+// }

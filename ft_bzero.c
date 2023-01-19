@@ -5,37 +5,47 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/15 19:00:22 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/16 18:08:08 by mnanke           ###   ########.fr       */
+/*   Created: 2023/01/19 13:29:14 by mnanke            #+#    #+#             */
+/*   Updated: 2023/01/19 17:44:10 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-#include<stdio.h>
-#include<strings.h>
+
+// char	*ft_strcpy(char *dst, const char *src)
+// {
+// 	size_t	i;
+
+// 	i = 0;
+// 	while (src[i])
+// 	{
+// 		dst[i] = src[i];
+// 		i++;
+// 	}
+// 	return (dst);
+// }
 
 void	ft_bzero(void *str, size_t n)
 {
 	ft_memset(str, 0, n);
 }
 
-int	main(void)
-{
-	char	*str;
+// int	main(void)
+// {
+// 	char	str1[1000];
+// 	size_t	i;
 
-	str1[] = "applepen";
-	size_t	i;
-
-	i = 2;
-	printf("input:(%s)\n", str1);
-	printf("times: %zu \n", i);
-	bzero(str1, i);
-	printf("answer: %c \n", str1[0]);
-	printf("answer: %c \n", str1[1]);
-	printf("answer: %c \n", str1[2]);
-	printf("answer: %c \n", str1[3]);
-	printf("answer: %c \n", str1[4]);
-	printf("answer: %c \n", str1[5]);
-	printf("answer: %c \n", str1[6]);
-	printf("answer: %c \n", str1[7]);
-}
+// 	ft_strcpy(str1, "appleApple");
+// 	i = 2;
+// 	printf("input:(%s)\n", str1);
+// 	printf("times: %zu\n", i);
+// 	ft_bzero(str1, i);
+// 	printf("answer: %c \n", str1[0]);
+// 	printf("answer: %c \n", str1[1]);
+// 	printf("answer: %c \n", str1[2]);
+// 	printf("answer: %c \n", str1[3]);
+// 	printf("answer: %c \n", str1[4]);
+// 	printf("answer: %c \n", str1[5]);
+// 	printf("answer: %c \n", str1[6]);
+// 	printf("answer: %c \n", str1[7]);
+// }
