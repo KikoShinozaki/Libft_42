@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 03:00:05 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/20 03:05:53 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/01/22 00:27:21 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	j = 0;
 	while (j < n)
 	{
-		*tmp = (unsigned char)src;
+		*tmp = (unsigned char) src;
 		tmp++;
 		j++;
 	}
