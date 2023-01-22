@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 03:06:16 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/22 01:27:06 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/01/22 18:03:52 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,47 +20,30 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	d = (char *)dest;
 	s = (char *)src;
 	if (d < s)
-	{
-		while (len--)
-		{
-			*d = *s;
-			*d++;
-			*s++;
-		}
-	}
+		ft_memcpy(dest, src, len);
 	else
 	{
-		d += len;
-		s -= len;
 		while (len--)
-		{
-			*d = *s;
-			*d--;
-			*s--;
-		}
+			*(d + len) = *(s + len);
 	}
 	return (dest);
 }
 
-// int	main(void)
-// {
-// 	char	dest[1000];
-// 	char	src[1000];
-// 	char	dest1[1000];
-// 	char	src1[1000];
+int	main(void)
+{
+	char	src[1000];
+	char	src1[1000];
 
-// 	printf("-------------------------\n");
-// 	strcpy(dest, "123456789");
-// 	strcpy(src, "pineapple");
-// 	strcpy(dest1, "123456789");
-// 	strcpy(src1, "pineapple");
-// 	printf("dest1:%s\n", dest);
-// 	memmove(dest, src, 3);
-// 	printf("memmove:%s\n", dest);
-// 	printf("-------------------------\n");
-// 	printf("dest2:%s\n", dest1);
-// 	ft_memmove(dest1, src1, 3);
-// 	printf("my_memmove:%s\n", dest1);
+	printf("-------------------------\n");
+	strcpy(src, "123456789");
+	strcpy(src1, "123456789");
+	printf("dest1:%s\n", src);
+	memmove(src +3, src, 3);
+	printf("memmove:%s\n", src);
+	printf("-------------------------\n");
+	printf("dest2:%s\n", src1);
+	ft_memmove(src1 +3, src1, 3);
+	printf("my_memmove:%s\n", src1);
 
-// 	return (0);
-// }
+	return (0);
+}

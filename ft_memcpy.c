@@ -6,39 +6,41 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 03:00:05 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/22 00:27:21 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/01/22 20:10:49 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-//まだmemsetのコピー
-void	*ft_memcpy(void *dest, const void *src, size_t n)
-{
-	size_t			j;
-	unsigned char	*tmp;
 
-	tmp = dest;
-	j = 0;
-	while (j < n)
-	{
-		*tmp = (unsigned char) src;
-		tmp++;
-		j++;
-	}
+void	*ft_memcpy(void *dest, const void *src, size_t len)
+{
+	char		*d;
+	const char	*s;
+
+	d = (char *)dest;
+	s = (char *)src;
+	if (!dest && !src)
+		return (NULL);
+	while (len--)
+		*d++ = *s++;
 	return (dest);
 }
 
 int	main(void)
 {
-	char 	str1[] = "applepen";
-	int		x;
-	size_t	i;
+	char	src[1000];
+	char	src1[1000];
 
-	i = 2;
-	x = 'B';
-	printf("input:(%s)\n", str1);
-	printf("times: %zu \n", i);
-	printf("input: %d \n", x);
-	ft_memset(str1, x, i);
-	printf("answer: %s \n", str1);
+	printf("-------------------------\n");
+	strcpy(src, "123456789");
+	strcpy(src1, "123456789");
+	printf("dest1:%s\n", src);
+	memcpy(src +3, src, 4);
+	printf("memcpy:%s\n", src);
+	printf("-------------------------\n");
+	printf("dest2:%s\n", src1);
+	ft_memcpy(src1 +3, src1, 4);
+	printf("my_memcpy:%s\n", src1);
+
+	return (0);
 }
