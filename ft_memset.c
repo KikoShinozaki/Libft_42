@@ -28,17 +28,17 @@ void	*ft_memset(void *str, int x, size_t i)
 	return (str);
 }
 
-int	main(void)
-{
-	char str1[] = "applepen";
-	int	x;
-	size_t i;
+// int	main(void)
+// {
+// 	char str1[] = "applepen";
+// 	int	x;
+// 	size_t i;
 
-	i = 2;
-	x = 'B';
-	printf("input:(%s)\n", str1);
-	printf("times: %zu \n", i);
-	printf("input: %d \n", x);
-	ft_memset(str1, x, i);
-	printf("answer: %s \n", str1);
-}
+// 	i = 2;
+// 	x = 'B';
+// 	printf("input:(%s)\n", str1);
+// 	printf("times: %zu \n", i);
+// 	printf("input: %d \n", x);
+// 	ft_memset(str1, x, i);
+// 	printf("answer: %s \n", str1);
+// }
