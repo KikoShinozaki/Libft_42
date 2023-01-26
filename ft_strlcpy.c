@@ -10,22 +10,37 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
-{
-	int	i;
-	int	n;
+#include"libft.h"
 
-	n = size - 1;
-	i = 0;
-	while (i <= n)
+size_t	ft_strlcpy(char *dest, char *src, unsigned int size)
+{
+	size_t	i;
+
+	i = (strlen(src));
+	if (size == 0)
+		return (i);
+	while (size > 1)
 	{
-		dest[i] = src[i];
-		if (src[i] == '\0')
+		if (*src == '\0')
 			break ;
-		i++;
+		*dest++ = *src++;
+		size--;
 	}
-	dest[i - 1] = '\0';
-	while (src[i] != '\0')
-		i++;
+	*dest = '\0';
 	return (i);
+}
+
+int	main(void)
+{
+	char	dest[1000];
+	char	src[1000];
+	char	dest1[1000];
+	char	src1[1000];
+
+	strcpy(dest, "12345");
+	strcpy(src, "apple");
+	strcpy(dest1, "12345");
+	strcpy(src1, "apple");
+	printf("strlcpy: %s %zu\n", dest, strlcpy(dest, src, 3));
+	printf("ft_strlcpy: %s %zu\n", dest1, ft_strlcpy(dest1, src1, 3));
 }

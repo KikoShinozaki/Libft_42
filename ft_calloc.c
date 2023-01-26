@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/16 14:50:38 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/26 16:05:12 by mnanke           ###   ########.fr       */
+/*   Created: 2023/01/26 15:17:39 by mnanke            #+#    #+#             */
+/*   Updated: 2023/01/26 15:47:12 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
+#include"libft.h"
 
-# define LIBFT_H
+void	*ft_calloc(size_t count, size_t size)
+{
+	void	*p;
 
-# include <stddef.h>
-# include <stdio.h>
-# include <string.h>
-# include <ctype.h>
-# include <stdlib.h>
+	if (!(count * size))
+	{
+		count = 1;
+		size = 1;
+	}
+	if (count > SIZE_MAX / size)
+		return (NULL);
+	p = malloc(count * size);
+	if (!p)
+		return (NULL);
+	ft_bzero(p, count * size);
+	return (p);
+}
 
-int		ft_isalpha(char c);
-int		ft_isdigit(char c);
-void	*ft_memset(void *str, int x, size_t i);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-size_t	ft_strlen(const char *str);
-
-#endif
+int	main(void)
+{
+	printf("calloc:%p\n", calloc(4, 5));
+	printf("ft_calloc:%p\n", ft_calloc(4, 5));
+}
