@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 03:27:44 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/26 17:11:41 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/01/28 16:34:55 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memchr(const void *buf, int ch, size_t n)
 {
-	const unsigned char	*b;
-	size_t				i;
+	unsigned char	*b;
+	size_t			i;
 
 	b = (unsigned char *)buf;
 	i = 0;

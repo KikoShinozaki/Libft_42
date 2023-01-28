@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 15:55:30 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/26 16:39:31 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/01/28 16:05:22 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,15 @@ char	*ft_strdup(const char *s1)
 	return (p);
 }
 
-int	main(void)
-{
-	char	s1[1000];
+// int	main(void)
+// {
+// 	char	s1[1000];
 
-	strcpy(s1, "1234");
-	printf("strdup:%p\n", strdup(s1));
-	printf("ft_strdup:%p\n", ft_strdup(s1));
-	printf("---------------\n");
-	strcpy(s1, "abcddd");
-	printf("strdup:%p\n", strdup(s1));
-	printf("ft_strdup:%p\n", ft_strdup(s1));
-}
+// 	strcpy(s1, "1234");
+// 	printf("strdup:%p\n", strdup(s1));
+// 	printf("ft_strdup:%p\n", ft_strdup(s1));
+// 	printf("---------------\n");
+// 	strcpy(s1, "abcddd");
+// 	printf("strdup:%p\n", strdup(s1));
+// 	printf("ft_strdup:%p\n", ft_strdup(s1));
+// }

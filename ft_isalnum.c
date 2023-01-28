@@ -6,13 +6,13 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 15:51:24 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/19 19:06:16 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/01/28 17:34:50 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(char c)
+int	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
 }

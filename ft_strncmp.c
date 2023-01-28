@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 23:53:49 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/25 22:09:28 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/01/28 16:05:40 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,24 +26,24 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (0);
 }
 
-int	main(void)
-{
-	char	s1[1000];
-	char	s2[1000];
+// int	main(void)
+// {
+// 	char	s1[1000];
+// 	char	s2[1000];
 
-	strcpy(s1, "abc");
-	strcpy(s2, "abc");
-	printf("strncmp %d\n", strncmp(s1, s2, 3));
-	printf("ft_strncmp %d\n", ft_strncmp(s1, s2, 3));
-	printf("-------------------------\n");
-	strcpy(s1, "abc");
-	strcpy(s2, "bac");
-	printf("strncmp %d\n", strncmp(s1, s2, 3));
-	printf("ft_strncmp %d\n", ft_strncmp(s1, s2, 3));
-	printf("-------------------------\n");
-	strcpy(s1, "acc");
-	strcpy(s2, "abc");
-	printf("strncmp %d\n", strncmp(s1, s2, 3));
-	printf("ft_strncmp %d\n", ft_strncmp(s1, s2, 3));
-	return (0);
-}
+// 	strcpy(s1, "abc");
+// 	strcpy(s2, "abc");
+// 	printf("strncmp %d\n", strncmp(s1, s2, 3));
+// 	printf("ft_strncmp %d\n", ft_strncmp(s1, s2, 3));
+// 	printf("-------------------------\n");
+// 	strcpy(s1, "abc");
+// 	strcpy(s2, "bac");
+// 	printf("strncmp %d\n", strncmp(s1, s2, 3));
+// 	printf("ft_strncmp %d\n", ft_strncmp(s1, s2, 3));
+// 	printf("-------------------------\n");
+// 	strcpy(s1, "acc");
+// 	strcpy(s2, "abc");
+// 	printf("strncmp %d\n", strncmp(s1, s2, 3));
+// 	printf("ft_strncmp %d\n", ft_strncmp(s1, s2, 3));
+// 	return (0);
+// }
