@@ -6,7 +6,7 @@
 #    By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/16 16:11:44 by mnanke            #+#    #+#              #
-#    Updated: 2023/01/28 17:05:12 by mnanke           ###   ########.fr        #
+#    Updated: 2023/01/29 20:51:26 by mnanke           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,10 +46,10 @@ SRCS =	ft_isalpha.c		\
 		# ft_itoa.c			\
 		# ft_strmapi.c		\
 		# ft_striteri.c		\
-		# ft_putchar_fd.c		\
-		# ft_putstr_fd.c		\
-		# ft_putendl_fd.c		\
-		# # ft_putnbr_fd.c
+		ft_putchar_fd.c		\
+		ft_putstr_fd.c		\
+		ft_putendl_fd.c	\
+		ft_putnbr_fd.c
 
 OBJS = $(SRCS:.c=.o)
 
