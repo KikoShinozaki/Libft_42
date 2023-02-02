@@ -6,7 +6,7 @@
 #    By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/16 16:11:44 by mnanke            #+#    #+#              #
-#    Updated: 2023/01/29 20:51:26 by mnanke           ###   ########.fr        #
+#    Updated: 2023/01/31 14:17:38 by mnanke           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,8 +39,8 @@ SRCS =	ft_isalpha.c		\
 		ft_atoi.c			\
 		ft_calloc.c			\
 		ft_strdup.c			\
-		# ft_substr.c			\
-		# ft_strjoin.c		\
+		ft_substr.c			\
+		ft_strjoin.c		\
 		# ft_strtrim.c		\
 		# ft_split.c			\
 		# ft_itoa.c			\

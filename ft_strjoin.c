@@ -1,44 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 15:55:30 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/30 16:23:58 by mnanke           ###   ########.fr       */
+/*   Created: 2023/01/30 14:21:18 by mnanke            #+#    #+#             */
+/*   Updated: 2023/01/31 14:17:03 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*p;
-	size_t	i;
+	size_t	len;
+	char	*str;
 
-	i = 0;
-	p = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
-	if (!p)
+	if (!s1 || !s2)
 		return (NULL);
-	while (s1[i])
-	{
-		p[i] = s1[i];
-		i++;
-	}
-	p[i] = '\0';
-	return (p);
+	len = ft_strlen(s1) + ft_strlen(s2) + 1;
+	str = (char *)malloc (sizeof(char) * len);
+	if (!str)
+		return (NULL);
+	ft_strlcpy(str, s1, ft_strlen(s1) + 1);
+	ft_strlcat(str, s2, len);
+	return (str);
 }
 
 // int	main(void)
 // {
 // 	char	s1[1000];
+// 	char	s2[1000];
 
 // 	strcpy(s1, "1234");
-// 	printf("strdup:%p\n", strdup(s1));
-// 	printf("ft_strdup:%p\n", ft_strdup(s1));
-// 	printf("---------------\n");
-// 	strcpy(s1, "abcddd");
-// 	printf("strdup:%p\n", strdup(s1));
-// 	printf("ft_strdup:%p\n", ft_strdup(s1));
+// 	strcpy(s2, "abcd");
+// 	printf("result1:%s\n", ft_strjoin(s1, s2));
 // }

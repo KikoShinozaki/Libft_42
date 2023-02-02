@@ -1,44 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 15:55:30 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/30 16:23:58 by mnanke           ###   ########.fr       */
+/*   Created: 2023/02/02 17:39:14 by mnanke            #+#    #+#             */
+/*   Updated: 2023/02/02 17:51:36 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*p;
 	size_t	i;
+	char	*str;
 
 	i = 0;
-	p = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
-	if (!p)
+	if (!s || !f)
 		return (NULL);
-	while (s1[i])
+	str = (char *)malloc (sizeof(char) * ft_strlen(s) + 1);
+	if (!str)
+		return (NULL);
+	while (s[i])
 	{
-		p[i] = s1[i];
+		str[i] = f(i, s[i]);
 		i++;
 	}
-	p[i] = '\0';
-	return (p);
+	str[i] = '\0';
+	return (str);
 }
-
-// int	main(void)
-// {
-// 	char	s1[1000];
-
-// 	strcpy(s1, "1234");
-// 	printf("strdup:%p\n", strdup(s1));
-// 	printf("ft_strdup:%p\n", ft_strdup(s1));
-// 	printf("---------------\n");
-// 	strcpy(s1, "abcddd");
-// 	printf("strdup:%p\n", strdup(s1));
-// 	printf("ft_strdup:%p\n", ft_strdup(s1));
-// }
