@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 16:14:02 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/31 14:28:37 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/05 22:15:05 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (NULL);
-	ft_strlcat(str, &s[start], lens + 1);
+	ft_strlcpy(str, &s[start], len + 1);
 	return (str);
 }
 
 // int	main(void)
 // {
-// 	char			s[1000];
+// 	char			s[17];
 // 	unsigned int	start;
 // 	size_t			len;
 
-// 	strcpy(s, "\0");
+// 	strcpy(s, "123456789");
 // 	start = 2;
-// 	len = 5;
-// 	printf("%s\n", ft_substr(s, start, len));
+// 	len = 6;
+// 	printf("ft_substr:%s\n", ft_substr(s, start, len));
 // }

@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 17:52:33 by mnanke            #+#    #+#             */
-/*   Updated: 2023/02/04 19:26:58 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/06 03:13:33 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,27 +21,29 @@ static size_t	sep_times(char const *s, char c)
 	sept = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
-		{
-			if (s[i + 1] == c)
-				i++;
+		if (s[i] != c && (s[i + 1] == '\0' || s[i + 1] == c))
 			sept++;
-		}
 		i++;
 	}
-	printf("iii:%zu\n", i);
-	printf("sept:%zu\n", sept);
 	return (sept);
 }
 
 static size_t	word_len(char const *s, char c)
 {
 	size_t	i;
+	size_t	j;
 
 	i = 0;
-	while (s[i] != c)
+	j = 0;
+	while (s[i] == c)
 		i++;
-	return (i);
+	while (s[i] != c && s[i])
+	{
+		i++;
+		j++;
+	}
+	printf("j:%zu\n -----\n", j);
+	return (j);
 }
 
 char	**ft_split(char const *s, char c)
@@ -55,23 +57,15 @@ char	**ft_split(char const *s, char c)
 		return (0);
 	i = 0;
 	j = 0;
-	printf("sep_times:%zu\n", sep_times(s, c));
 	str = malloc(sizeof(char *) * (sep_times(s, c) + 1));
 	if (!str)
 		return (0);
 	while (s[i])
 	{
-		if (s[i] != c)
-		{
-			len = word_len(&s[i], c);
-			str[j++] = ft_substr(&s[i], 0, len);
-			i += len;
-			printf("s:%s\n", s);
-			printf("len:%zu\n", len);
-			printf("--------\n");
-		}
+		len = word_len(&s[i], c);
+		str[j++] = ft_substr(&s[i], 0, len);
+		i += len;
 		i++;
-		printf("i:%zu\n", i);
 	}
 	str[j] = 0;
 	return (str);
@@ -79,12 +73,12 @@ char	**ft_split(char const *s, char c)
 
 int	main(void)
 {
-	char	s[25];
+	char	s[28];
 	char	c;
 	char	**tmp;
 	size_t	i;
 
-	strcpy(s, "42343,");
+	strcpy(s, "0123,567,,01,,,56789,,,0");
 	c = ',';
 	i = 0;
 	tmp = ft_split(s, c);
@@ -92,10 +86,9 @@ int	main(void)
 	{
 		if (tmp[i] == NULL)
 			break ;
-		printf("ft_split[%zu]:%s", i, tmp[i]);
+		printf("ft_split[%zu]:%s\n", i, tmp[i]);
 		i++;
 	}
-	// printf("sep_times:%zu\n", sep_times(s, c));
-	// printf("word_len:%zu\n", word_len(s, c));
+	printf("s:%s\n", s);
 	return (0);
 }
