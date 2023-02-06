@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 16:14:02 by mnanke            #+#    #+#             */
-/*   Updated: 2023/02/05 22:15:05 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/06 14:34:11 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	lens;
 
 	lens = ft_strlen(s);
-	if (start >= lens && len == 0)
+	if (start >= lens || len == 0)
 		return (ft_strdup(""));
 	if (len > lens - start)
 		len = lens - start;
@@ -35,8 +35,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // 	unsigned int	start;
 // 	size_t			len;
 
-// 	strcpy(s, "123456789");
-// 	start = 2;
-// 	len = 6;
+// 	strcpy(s, "libft-test-tokyo");
+// 	start = 20;
+// 	len = 100;
 // 	printf("ft_substr:%s\n", ft_substr(s, start, len));
 // }

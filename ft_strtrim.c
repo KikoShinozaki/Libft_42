@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 14:19:27 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/31 16:05:41 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/06 16:49:37 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (s1 == NULL || set == NULL)
 		return (NULL);
-	while (ft_strchr(set, *s1) != NULL)
+	while (*s1 != '\0' && ft_strchr(set, *s1) != NULL)
 		s1++;
 	len = ft_strlen(s1);
 	while (len > 0 && ft_strchr(set, s1[len - 1]) != NULL)
@@ -28,12 +28,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 
-int	main(void)
-{
-	char	s1[1000];
-	char	set[1000];
+// int	main(void)
+// {
+// 	char	s1[1000];
+// 	char	set[1000];
 
-	strcpy(s1, "1234AAA223311223");
-	strcpy(set, "1234");
-	printf("ft_strtrim :%s", ft_strtrim(s1, set));
-}
+// 	strcpy(s1, "");
+// 	strcpy(set, "");
+// 	printf("ft_strtrim:%s", ft_strtrim(s1, set));
+// }

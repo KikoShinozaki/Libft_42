@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 16:08:10 by mnanke            #+#    #+#             */
-/*   Updated: 2023/02/02 16:29:39 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/06 17:05:50 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,19 @@
 
 static size_t	size_check(int num)
 {
-	size_t	i;
+	size_t		i;
+	long long	numbox;
 
 	i = 1;
-	if (num < 0)
+	numbox = num;
+	if (numbox < 0)
 	{
 		i++;
-		num *= -1;
+		numbox *= -1;
 	}
-	while (num >= 10)
+	while (numbox >= 10)
 	{
-		num /= 10;
+		numbox /= 10;
 		i++;
 	}
 	return (i);
@@ -42,6 +44,8 @@ char	*ft_itoa(int n)
 	if (!str)
 		return (NULL);
 	str[len + 1] = '\0';
+	if (num == 0)
+		str[0] = '0';
 	if (num < 0)
 	{
 		str[0] = '-';
@@ -60,7 +64,7 @@ char	*ft_itoa(int n)
 // {
 // 	int	n;
 
-// 	n = -1233312345;
+// 	n = 0;
 // 	printf("size_check:%zu\n", size_check(n));
 // 	printf("ft_itoa:%s\n", ft_itoa(n));
 // }
