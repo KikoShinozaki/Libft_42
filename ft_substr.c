@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 16:14:02 by mnanke            #+#    #+#             */
-/*   Updated: 2023/02/06 14:34:11 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/07 16:33:11 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 	size_t	lens;
 
+	if (s == NULL)
+		return (0);
 	lens = ft_strlen(s);
-	if (start >= lens || len == 0)
+	if (start >= lens || len == 0 || *s == '\0')
 		return (ft_strdup(""));
 	if (len > lens - start)
 		len = lens - start;

@@ -6,7 +6,7 @@
 #    By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/16 16:11:44 by mnanke            #+#    #+#              #
-#    Updated: 2023/02/06 14:04:19 by mnanke           ###   ########.fr        #
+#    Updated: 2023/02/07 19:53:28 by mnanke           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 
 CC := gcc
 
-CFLAGS := -Wall -Wextra -Werror
+CFLAGS := -Wall -Wextra -Werror -std=c99
 
 SRCS =	ft_isalpha.c		\
 		ft_isdigit.c		\
@@ -49,7 +49,10 @@ SRCS =	ft_isalpha.c		\
 		ft_putchar_fd.c		\
 		ft_putstr_fd.c		\
 		ft_putendl_fd.c	\
-		ft_putnbr_fd.c
+		ft_putnbr_fd.c\
+		ft_lstnew.c\
+		ft_lstadd_front.c\
+		ft_lstsize
 
 OBJS = $(SRCS:.c=.o)
 

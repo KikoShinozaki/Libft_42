@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 15:17:39 by mnanke            #+#    #+#             */
-/*   Updated: 2023/02/07 16:38:29 by mnanke           ###   ########.fr       */
+/*   Created: 2023/02/07 16:45:00 by mnanke            #+#    #+#             */
+/*   Updated: 2023/02/07 20:19:23 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+t_list	*ft_lstnew(void *content)
 {
-	void	*p;
+	t_list	*list1;
 
-	if (!(count * size))
-	{
-		count = 1;
-		size = 1;
-	}
-	if (count > SIZE_MAX / size)
+	list1 = malloc(sizeof(t_list));
+	if (!list1)
 		return (NULL);
-	p = malloc(count * size);
-	if (!p)
-		return (NULL);
-	ft_bzero(p, count * size);
-	return (p);
+	list1 -> content = content;
+	list1 -> next = NULL;
+	return (list1);
 }
 
 // int	main(void)
 // {
-// 	printf("calloc:%p\n", calloc(4, 5));
-// 	printf("ft_calloc:%p\n", ft_calloc(4, 5));
+// 	t_list	*check;
+
+// 	check = ft_lstnew("abaaba");
+// 	printf("content value:%s", check->content);
+// 	return (0);
 // }

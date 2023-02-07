@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 03:06:16 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/28 17:13:06 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/07 15:35:36 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 
 	d = (char *)dest;
 	s = (char *)src;
+	if (d == s || len == 0)
+		return (dest);
 	if (d < s)
 		ft_memcpy(dest, src, len);
 	else

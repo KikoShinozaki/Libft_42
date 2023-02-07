@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 23:53:49 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/28 16:05:40 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/07 16:14:43 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
+	if (n == 0)
+		return (0);
 	while (i < n)
 	{
-		if (s1[i] != s2[i])
+		if (s1[i] != s2[i] || !s1[i] || !s2[i])
 			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		i++;
 	}
