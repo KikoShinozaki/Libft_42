@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 19:40:37 by mnanke            #+#    #+#             */
-/*   Updated: 2023/02/07 21:05:46 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/08 18:34:15 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,11 @@
 int	ft_lstsize(t_list *list)
 {
 	int		len;
-	t_list	*temp;
 
 	len = 0;
-	temp = list;
-	while (temp != NULL)
+	while (list != NULL)
 	{
-		temp = temp -> next;
+		list = list -> next;
 		len++;
 	}
 	return (len);

@@ -6,15 +6,11 @@
 #    By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/16 16:11:44 by mnanke            #+#    #+#              #
-#    Updated: 2023/02/07 19:53:28 by mnanke           ###   ########.fr        #
+#    Updated: 2023/02/08 21:33:58 by mnanke           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-
-CC := gcc
-
-CFLAGS := -Wall -Wextra -Werror -std=c99
 
 SRCS =	ft_isalpha.c		\
 		ft_isdigit.c		\
@@ -49,24 +45,41 @@ SRCS =	ft_isalpha.c		\
 		ft_putchar_fd.c		\
 		ft_putstr_fd.c		\
 		ft_putendl_fd.c	\
-		ft_putnbr_fd.c\
-		ft_lstnew.c\
-		ft_lstadd_front.c\
-		ft_lstsize
+		ft_putnbr_fd.c
+		
+BSRCS =	ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c 
+			# ft_lstdelone.c \
+			# ft_lstclear.c \
+			# ft_lstiter.c \
+			# ft_lstmap.c
 
 OBJS = $(SRCS:.c=.o)
+
+BONUS_OBJS = $(BSRCS:.c=.o)
+
+CC = gcc
+
+CFLAGS = -Wall -Wextra -Werror -std=c99
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
 clean:
-	rm -rf $(OBJS)
+	rm -rf $(OBJS) $(BONUS_OBJS)
 	
 fclean: clean
 	rm -rf $(NAME)
 	
 re: fclean all
+
 
 .PHONY:	all clean fclean re
