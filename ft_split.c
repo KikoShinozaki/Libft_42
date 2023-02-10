@@ -87,7 +87,7 @@ char	**ft_split(char const *s, char c)
 // 	char	c;
 // 	char	**tmp;
 // 	size_t	i;
-
+//
 // 	strcpy(s, "0123,567,,01,,,56789,,,");
 // 	c = ',';
 // 	i = 0;
