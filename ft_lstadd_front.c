@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 18:18:12 by mnanke            #+#    #+#             */
-/*   Updated: 2023/02/07 20:23:08 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/11 16:56:35 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new -> next = *lst;
 	*lst = new;
 }
-
-// #include <stdio.h>
 
 // int    main(void)
 // {

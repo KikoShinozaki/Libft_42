@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 20:44:08 by mnanke            #+#    #+#             */
-/*   Updated: 2023/02/08 21:56:35 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/11 14:18:45 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	else
 		tmp ->next = new;
 }
-
-#include <stdio.h>
 
 //int    main(void)
 //{

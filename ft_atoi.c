@@ -6,18 +6,18 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 13:28:34 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/29 18:54:18 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/11 16:57:03 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	is_sp(char str)
+static int	is_sp(char str)
 {
 	return ((9 <= str && str <= 13) || str == 32);
 }
 
-int	check_ans(int pm)
+static int	check_ans(int pm)
 {
 	if (pm == -1)
 		return ((int)LONG_MIN);
