@@ -6,11 +6,16 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 13:29:14 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/19 17:44:10 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/11 20:14:40 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
+
+void	ft_bzero(void *str, size_t n)
+{
+	ft_memset(str, 0, n);
+}
 
 // char	*ft_strcpy(char *dst, const char *src)
 // {
@@ -24,11 +29,6 @@
 // 	}
 // 	return (dst);
 // }
-
-void	ft_bzero(void *str, size_t n)
-{
-	ft_memset(str, 0, n);
-}
 
 // int	main(void)
 // {
