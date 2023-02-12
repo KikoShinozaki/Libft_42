@@ -50,3 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#tester
+libft-tester-tokyo
+test
+42tokyo.code-workspace
+.DS_Store
+.vscode/

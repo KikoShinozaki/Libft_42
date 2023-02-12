@@ -6,7 +6,7 @@
 #    By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/16 16:11:44 by mnanke            #+#    #+#              #
-#    Updated: 2023/02/11 17:55:44 by mnanke           ###   ########.fr        #
+#    Updated: 2023/02/12 15:31:17 by mnanke           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,7 +67,7 @@ endif
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -std=c99
+CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 

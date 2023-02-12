@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 19:47:19 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/29 20:44:42 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/12 14:47:14 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putnbr_fd(int n, int fd)
 	long long	num;
 
 	num = n;
+	if (fd < 0)
+		return ;
 	if (num < 0)
 	{
 		ft_putchar_fd('-', fd);

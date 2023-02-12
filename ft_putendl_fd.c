@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 19:47:45 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/29 20:47:41 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/12 14:48:39 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (s == NULL)
+	if (s == NULL || fd < 0)
 		return ;
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);

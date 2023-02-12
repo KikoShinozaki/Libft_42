@@ -6,25 +6,17 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 14:50:38 by mnanke            #+#    #+#             */
-/*   Updated: 2023/02/11 15:41:37 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/12 14:39:14 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
 # include <unistd.h>
 # include <stdint.h>
 # include <stdlib.h>
 # include <limits.h>
-# include <stdio.h>
-# include <string.h>
-# include <ctype.h>
-# include <stdlib.h>
-# include <sys/types.h>
-# include <sys/stat.h>
-# include <fcntl.h>
 
 typedef struct s_list
 {
