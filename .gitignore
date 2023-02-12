@@ -51,7 +51,7 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-#tester
+#tester and others
 libft-tester-tokyo
 test
 42tokyo.code-workspace
