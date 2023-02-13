@@ -12,21 +12,19 @@
 
 #include"libft.h"
 
-static size_t	size_check(int num)
+static size_t	size_check(long long num)
 {
 	size_t		i;
-	long long	numbox;
 
 	i = 1;
-	numbox = num;
-	if (numbox < 0)
+	if (num < 0)
 	{
 		i++;
-		numbox *= -1;
+		num *= -1;
 	}
-	while (numbox >= 10)
+	while (num >= 10)
 	{
-		numbox /= 10;
+		num /= 10;
 		i++;
 	}
 	return (i);
