@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 13:28:34 by mnanke            #+#    #+#             */
-/*   Updated: 2023/02/11 16:57:03 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/14 17:42:26 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	ft_atoi(const char *str)
 // {
 // 	char	str[1000];
 
-// 	strcpy(str, "100+100");
+// 	strcpy(str, "123+100");
 // 	printf("atoi1:%d\n", atoi(str));
 // 	printf("test1:%d\n", ft_atoi(str));
 // 	printf("---------------------\n");
