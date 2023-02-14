@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 03:06:16 by mnanke            #+#    #+#             */
-/*   Updated: 2023/02/07 15:35:36 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/14 15:24:10 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-	char		*d;
-	const char	*s;
+	unsigned char	*d;
+	unsigned char	*s;
 
-	d = (char *)dest;
-	s = (char *)src;
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
 	if (d == s || len == 0)
 		return (dest);
 	if (d < s)

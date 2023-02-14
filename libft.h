@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 14:50:38 by mnanke            #+#    #+#             */
-/*   Updated: 2023/02/12 14:39:14 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/14 15:59:00 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <stdint.h>
 # include <stdlib.h>
 # include <limits.h>
+// # include <string.h>
+// # include <stdio.h>
 
 typedef struct s_list
 {
