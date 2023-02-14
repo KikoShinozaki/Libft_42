@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 23:20:00 by mnanke            #+#    #+#             */
-/*   Updated: 2023/02/14 15:33:24 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/14 19:02:16 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	long long int	i;
+	size_t	i;
 
 	i = ft_strlen(s);
-	while (0 <= i)
+	while (1)
 	{
 		if (s[i] == (char)c)
 			return ((char *)(s + i));
+		if (i == 0)
+			break ;
 		i--;
 	}
 	return (NULL);
