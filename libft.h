@@ -17,8 +17,8 @@
 # include <stdint.h>
 # include <stdlib.h>
 # include <limits.h>
-// # include <string.h>
-// # include <stdio.h>
+# include <string.h>
+# include <stdio.h>
 
 typedef struct s_list
 {

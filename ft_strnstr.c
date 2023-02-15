@@ -37,10 +37,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // {
 // 	char	haystack[1000];
 // 	char	needle[1000];
-
-// 	strcpy(haystack, "123bbb");
-// 	strcpy(needle, "123");
-// 	printf("strnstr:%p\n", strnstr(haystack, needle, 3));
-// 	printf("ft_strnstr:%p\n", ft_strnstr(haystack, needle, 3));
+//
+// 	strcpy(haystack, "abbbcdefg");
+// 	strcpy(needle, "bbc");
+//// 	printf("strnstr:%s\n", strnstr(haystack, needle, 3));
+// 	printf("ft_strnstr:%s\n", ft_strnstr(haystack, needle, 6));
 // 	return (0);
 // }
