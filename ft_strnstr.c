@@ -14,21 +14,21 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	n;
-	size_t	m;
+	size_t	h_c;
+	size_t	n_c;
 
-	n = 0;
+	h_c = 0;
 	if (needle[0] == '\0')
 		return ((char *)haystack);
-	while (n < len && haystack[n] != '\0')
+	while (h_c < len && haystack[h_c] != '\0')
 	{
-		m = 0;
-		while (n + m < len && haystack[n + m] == needle[m] && needle[n] != '\0'
-			&& haystack[n + m] != '\0')
-			m++;
-		if (!needle[m])
-			return ((char *)(haystack + n));
-		n++;
+		n_c = 0;
+		while (h_c + n_c < len && haystack[h_c + n_c] == needle[n_c]
+			&& needle[n_c] != '\0' && haystack[h_c + n_c] != '\0')
+			n_c++;
+		if (!needle[n_c])
+			return ((char *)(haystack + h_c));
+		h_c++;
 	}
 	return (NULL);
 }
@@ -38,9 +38,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // 	char	haystack[1000];
 // 	char	needle[1000];
 //
-// 	strcpy(haystack, "abbbcdefg");
+// 	strcpy(haystack, "acdefghudwfseufhisuhhuiaiiuiudwbbc");
 // 	strcpy(needle, "bbc");
-//// 	printf("strnstr:%s\n", strnstr(haystack, needle, 3));
-// 	printf("ft_strnstr:%s\n", ft_strnstr(haystack, needle, 6));
+// 	printf("strnstr:%s\n", strnstr(haystack, needle, 3));
+// 	printf("ft_strnstr:%s\n", ft_strnstr(haystack, needle, 36));
 // 	return (0);
 // }

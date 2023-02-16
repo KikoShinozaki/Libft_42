@@ -34,7 +34,7 @@ int	ft_atoi(const char *str)
 	ans = 0;
 	while (is_sp(*str))
 		str ++;
-	while ((*str == '-' || *str == '+') && !ft_isdigit(*str))
+	while ((*str == '-' || *str == '+'))
 	{
 		if (*str == '-')
 			pm = pm * -1;
