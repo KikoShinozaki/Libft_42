@@ -29,7 +29,9 @@ int	ft_atoi(const char *str)
 {
 	int		pm;
 	long	ans;
+	size_t	lm_div;
 
+	lm_div = LONG_MAX / 10;
 	pm = 1;
 	ans = 0;
 	while (is_sp(*str))
@@ -42,12 +44,11 @@ int	ft_atoi(const char *str)
 		if (*str == '-' || *str == '+')
 			return (0);
 	}
-	while (ft_isdigit(*str))
+	while (*str && ft_isdigit(*str))
 	{
-		if ((ans * 10 + (*str - '0')) / 10 == ans)
-			ans = ans * 10 + *str++ - '0';
-		else
+		if (ans > lm_div || (ans == lm_div && *str - '0' > LONG_MAX % 10))
 			return (check_ans(pm));
+		ans = ans * 10 + *str++ - '0';
 	}
 	return (pm * ans);
 }
