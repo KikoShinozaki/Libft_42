@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 13:28:34 by mnanke            #+#    #+#             */
-/*   Updated: 2023/02/14 17:42:26 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/19 15:30:55 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_atoi(const char *str)
 {
 	int		pm;
 	long	ans;
-	size_t	lm_div;
+	long	lm_div;
 
 	lm_div = LONG_MAX / 10;
 	pm = 1;
