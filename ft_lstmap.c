@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 15:35:46 by mnanke            #+#    #+#             */
-/*   Updated: 2023/02/11 16:38:09 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/22 14:30:30 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		newnode = ft_lstnew((f)(lst->content));
 		if (newnode == NULL)
 		{
-			ft_lstclear(&lst, del);
+			ft_lstclear(&newlst, del);
 			return (NULL);
 		}
 		ft_lstadd_back(&newlst, newnode);
